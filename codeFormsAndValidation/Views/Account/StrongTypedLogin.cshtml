@@ -1,0 +1,21 @@
+﻿<!-- Importing model class name is LogingViewModel -->
+@model codeFormsAndValidation.Models.LoginViewModel
+@{
+    ViewData["Title"] = "StrongTypedLogin";
+}
+
+<h1>StrongTypedLogin</h1>
+<body>
+    @using(Html.BeginForm("LoginSuccess","Account",FormMethod.Post))
+    {
+        // m=> this is Lamda variable. Receiving Username data from StrongTypedLogin View and storing this data in Model class.
+        <div>Username : @Html.TextBoxFor(m=>m.Username)</div>
+        
+        // m=> this is Lamda variable . Receiving Password data from StrongTypedLogin View and storing this data in Model class.
+        <div>Password : @Html.PasswordFor(m=>m.Password)</div>
+
+        //where are Submitting these value ? submitting data to LoginViewModel.cs class
+        <div><input type="submit" value="Login"/></div>
+    }
+</body>
+

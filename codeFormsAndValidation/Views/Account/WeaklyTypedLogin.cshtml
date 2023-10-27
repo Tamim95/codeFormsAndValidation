@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WeaklyTypedLogin</title>
+</head>
+<body>
+    @using (Html.BeginForm("LoginPost", "Account", FormMethod.Post))
+    {
+    //MethodName,Controller,MethodTyped
+        <div>Username : @Html.TextBox("Username")</div>
+        <div>Password : @Html.Password("Password")</div>
+        <div>
+            <input type="submit" value="Login" />
+            </div>
+
+    }
+</body>
+</html>

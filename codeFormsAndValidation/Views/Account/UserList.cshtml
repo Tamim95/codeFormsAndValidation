@@ -1,0 +1,23 @@
+﻿
+<!--importing LoginViewModel in UserList.cshtml-->
+@model IList<codeFormsAndValidation.Models.LoginViewModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserList</title>
+</head>
+<body>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>Name: @item.Username - Password: @item.Password</li>
+        }
+    </ul>
+</body>
+</html>
